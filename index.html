@@ -8,26 +8,11 @@
 </head>
 <body>
     <div>
-        <select name="agents" id="" onclick=get_agents()>
+        <select name="agents" id="" onclick=get_agents() onchange=get_agent_infos()>
             <option value="" onclick="">Select your agent</option>
         </select>
     </div>
-    <div id="agent">
-        <div>
-            <h1 id="name_agent"></h1>
-            <img src="" alt="agent_img" id="agent_img">
-            <div id="rôle">
-                <img src="" alt="role" id="img_role">
-                <h3 id="role_name"></h3>
-            </div>
-            <p id="description"></p>
-            <div id="competences">
-                <h2 id="nom_competence"></h2>
-                <img src="" alt="" id="competence_img">
-                <p id="desc_competence"></p>
-            </div>
-        </div>
-    </div>
+
     <script src="JS/valo_functions.js"></script>
 </body>
 </html>

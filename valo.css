@@ -1,4 +1,53 @@
-#agent{
-    background-color: black;
-    color: white;
+body{
+    background-image: url(background_valo.jpg);
+    background-color: rgba(71, 71, 71, 0.8);
+    background-blend-mode:lighten;
+    color: rgb(0, 238, 255);
+    font-weight: 1000;
 }
+
+#agent{
+    margin-left: 20%;
+}
+
+p{
+    width: 35%;
+}
+
+#image_agent{
+    display: inline-flex;
+    border-radius: 50%;
+}
+
+#role_agent_div{
+    display: inline-flex;
+
+}
+
+#image_role{
+    display: block;
+}
+
+.ability_icon{
+    width: 80%;
+    height: 80%;
+    display: block;
+}
+
+.ability_left{
+    margin: auto;
+}
+.ability_rigth{
+    margin-left: 3%;
+}
+
+.ability_desc{
+    width: 100%;
+}
+
+.ability{
+    display: inline-flex;
+    width: 20%;
+    margin-right: 10%;
+}
+
