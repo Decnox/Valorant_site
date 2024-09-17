@@ -1,7 +1,7 @@
 body{
     background-image: url(background_valo.jpg);
-    background-color: rgba(71, 71, 71, 0.8);
-    background-blend-mode:lighten;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(7px);
     color: rgb(0, 238, 255);
     font-weight: 1000;
 }
