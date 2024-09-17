@@ -29,25 +29,37 @@ p{
 }
 
 .ability_icon{
-    width: 80%;
-    height: 80%;
-    display: block;
+    width: 5em;
+    height: 5em;
+    text-align: center;
+    /* display: block; */
 }
 
 .ability_left{
     margin: auto;
+    width: 35%;
 }
 .ability_rigth{
     margin-left: 3%;
+    width: 60%;
 }
 
 .ability_desc{
     width: 100%;
+    font-size: 0.8em;
 }
 
 .ability{
     display: inline-flex;
     width: 20%;
+    height: 25%;
     margin-right: 10%;
+    margin-bottom: 5%;
+    border-radius: 10%;
+    background-color: rgba(2, 28, 112, 0.514);
+}
+
+h3{
+    text-align: center;
 }
 
