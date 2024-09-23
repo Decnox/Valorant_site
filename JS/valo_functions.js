@@ -34,6 +34,7 @@ function get_agent_infos(){
         .then(response=>response.json())
         .then(data=>{
             const agent = data.data
+            
             // Creating main div for agent informations
             const agent_main_div = document.querySelector("#agent_main_div")
             agent_main_div.innerHTML = ""
@@ -106,6 +107,7 @@ function create_abilitiy(ability, abilities_div){
         left_part.appendChild(ability_icon)
     }
     const ability_name = document.createElement("h3")
+    ability_name.setAttribute("id", "ability_name")
     const value_ability_name = ability.displayName
     ability_name.innerHTML = value_ability_name
     left_part.appendChild(ability_name)
