@@ -1,57 +1,94 @@
 body{
-    background-color: rgb(1, 0, 73);
-    /* background-repeat: no-repeat; */
-    backdrop-filter: blur(7px);
-    color: rgb(0, 238, 255);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 21%, rgba(50,49,68,1) 63%, rgba(107,104,166,1) 100%);
     font-weight: 1000;
+    margin: 0%;
+    color: grey;
 }
 
 #agents_select{
     margin-left: 50%;
 }
 
-#agent{
-    background-color: rgba(2, 28, 112, 0.514);
-    width: 80%;
-    border-radius: 1vw;
-    padding-left: 1vw;
-    padding: 1%;
-    margin-bottom: 1%;
+#agent_main_div{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-#description_agent{
-    width: 100%;
-    font-size: small;
+#agent{
+    height: 75vh;
+    order: -2;
+}
+#agent_infos{
+    width: 25vw;
+    align-self: flex-start;
 }
 
 #image_agent{
-    width: 10%;
-    display: inline-flex;
-    border-radius: 50%;
+    width: 35vw;
+    height: 45vw;
+    justify-self: flex-end;
+    align-self: flex-end;
 }
 
-#role_agent_div{
-    display: inline-flex;
+#name_description{
+    align-self: flex-start;
+    justify-self: center;
+}
+
+#description_agent{
+    width: 30vw;
+    font-size: x-large;
+    align-self: center;
+}
+
+#agent_name{
+    justify-self: center;
+    align-self: flex-start;
+    width: fit-content;
+    font-size: 5vw;
+}
+
+#role{
+    width: 10vw;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+#role_name{
+    align-self: flex-end;
+    justify-self: flex-start;
 }
 
 #image_role{
-    display: block;
-    width: 20%;
-    height: 20%;
+    width: 6vw;
+    height: 6vw;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+
+#abilites_div{
+    background-color: #0f1923;
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between
 }
 
 .ability_icon{
     width: 40%;
     height: 40%;
     text-align: center;
-    /* display: block; */
 }
 
 .ability_left{
     width: 30%;
 }
 .ability_rigth{
-    margin-left: 1%;
     width: 60%;
 }
 
@@ -62,13 +99,9 @@ body{
 
 .ability{
     display: inline-flex;
-    width: 25%;
-    height: 25%;
-    padding:1%;
-    margin-right: 5%;
-    margin-bottom: 1%;
+    width: 26%;
+    height: fit-content;
     border-radius: 1vw;
-    background-color: rgba(2, 28, 112, 0.514);
 }
 
 @media screen {
@@ -85,6 +118,15 @@ body{
         #ability_right{
             width: 65%;
         }
+        #image_agent{
+            width: 35vh;
+            height: 45vh;
+            align-self: center;
+        }
+
+        #description_agent{
+            font-size: medium;
+        }
     }
 
     @media (max-width: 720px){
@@ -94,6 +136,19 @@ body{
         }
         #ability_name{
             font-size: smaller;
+        }
+
+        #abilites_div{
+            height: auto;
+        }
+        #image_agent{
+            width: 25vh;
+            height: 35vh;
+            align-self: center;
+        }
+
+        #description_agent{
+            font-size: small;
         }
     }
 }

@@ -40,26 +40,13 @@ function get_agent_infos(){
             agent_main_div.innerHTML = ""
             const agent_div = document.createElement("div")
             agent_div.setAttribute('id', 'agent')
-            agent_main_div.appendChild(agent_div)
 
-            // creating name agent part
-            const name_agent = document.createElement("h1")
-            const value_name_agent = agent.displayName
-            name_agent.innerHTML = value_name_agent
-            agent_div.appendChild(name_agent)
-
-            // creating image of agent
-            const image_agent = document.createElement("img")
-            image_agent.setAttribute('id', 'image_agent')
-            const value_image_agent = agent.displayIcon
-            image_agent.src = value_image_agent
-            agent_div.appendChild(image_agent)
+            const agent_infos = document.createElement("div")
+            agent_infos.setAttribute("id", "agent_infos")
 
             // Creating role infos part
-            const role_div = document.createElement('div')
-            role_div.setAttribute('id', 'role_agent_div')
-            agent_div.appendChild(role_div)
-
+            const role_div = document.createElement("div")
+            role_div.setAttribute("id", "role")
             const image_role = document.createElement("img")
             image_role.setAttribute('id','image_role')
             const value_image_role = agent.role.displayIcon
@@ -67,18 +54,38 @@ function get_agent_infos(){
             role_div.appendChild(image_role)
 
             const role_name = document.createElement("h3")
+            role_name.setAttribute("id", "role_name")
             const value_role_name = agent.role.displayName
             role_name.innerHTML = value_role_name
             role_div.appendChild(role_name)
+            agent_infos.appendChild(role_div)
+            agent_main_div.appendChild(agent_infos)
 
+            const name_description = document.createElement("div")
+            name_description.setAttribute("id", "name_description")
             const description = document.createElement("p")
             description.setAttribute("id", "description_agent")
             const value_description = agent.description
             description.innerHTML = value_description
-            agent_div.appendChild(description)
+            
+            // creating name agent part
+            const name_agent = document.createElement("h1")
+            name_agent.setAttribute("id","agent_name")
+            const value_name_agent = agent.displayName
+            name_agent.innerHTML = value_name_agent
+            name_description.appendChild(name_agent)
+            name_description.appendChild(description)
+            agent_main_div.appendChild(name_description)
+
+            const agent_background = agent.bustPortrait
+            const image_agent = document.createElement("img")
+            image_agent.setAttribute("id", "image_agent")
+            image_agent.src = agent_background
+            agent_main_div.appendChild(image_agent)
 
             const abilities_div = document.createElement("div")
             abilities_div.setAttribute("id", "abilites_div")
+            agent_main_div.appendChild(agent_div)
             agent_main_div.appendChild(abilities_div)
 
             const abilities = agent.abilities
